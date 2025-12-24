@@ -1,0 +1,2 @@
+# OSMAR---Oil-Spill-Monitoring-using-Advanced-SAR-Imagery
+Oil spills pose serious threats to marine ecosystems and require rapid detection. This project uses deep learning on Synthetic Aperture Radar (SAR) images to automatically detect and segment oil spill regions. A lightweight encoder–decoder model with MobileNetV2 enables accurate, efficient, and scalable monitoring for environmental surveillance.
