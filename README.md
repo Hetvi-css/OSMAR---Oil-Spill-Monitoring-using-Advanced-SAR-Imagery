@@ -1,73 +1,75 @@
-# Welcome to your Lovable project
+# 🛢️ Oil Spill Detection Using Deep Learning on SAR Images
 
-## Project info
+## 📌 Overview
+This project focuses on the automatic detection and segmentation of oil spills in marine environments using Synthetic Aperture Radar (SAR) satellite imagery and deep learning techniques. The proposed approach uses a lightweight encoder–decoder architecture with MobileNetV2 as the backbone, enabling efficient and accurate oil spill identification suitable for large-scale and near real-time monitoring.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+---
 
-## How can I edit this code?
+## 🎯 Objectives
+- Detect oil spill regions from SAR images  
+- Perform pixel-level oil spill segmentation  
+- Reduce false positives caused by look-alike ocean phenomena  
+- Support rapid environmental monitoring and response  
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛰️ Dataset
+- **Type:** Synthetic Aperture Radar (SAR) images  
+- **Image Size:** 512 × 512  
+- **Channels:** Single-channel (grayscale)  
+- **Annotations:** Pixel-wise binary masks  
+- **Preprocessing:** Resizing, normalization, noise handling  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧠 Model Architecture
+- **Encoder:** MobileNetV2  
+- **Decoder:** U-Net style upsampling network  
+- **Skip Connections:** For multi-scale feature fusion  
+- **Activation Functions:** ReLU6, Sigmoid  
+- **Loss Function:** Binary Cross-Entropy / Dice Loss  
+- **Optimizer:** Adam  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ⚙️ Methodology
+1. Preprocess SAR images  
+2. Extract features using MobileNetV2 encoder  
+3. Fuse features through skip connections  
+4. Segment oil spill regions using decoder layers  
+5. Evaluate and visualize predictions  
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📊 Evaluation Metrics
+- Intersection over Union (IoU)  
+- Dice Coefficient  
+- Precision  
+- Recall  
+- F1-Score  
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Key Features
+- Accurate oil spill segmentation  
+- Lightweight and efficient model  
+- Robust to SAR noise and ocean clutter  
+- Scalable for environmental monitoring applications  
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## 🌍 Applications
+- Marine pollution monitoring  
+- Coastal and offshore surveillance  
+- Environmental impact assessment  
+- Disaster response and management  
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🛠️ Tech Stack
+- Python  
+- TensorFlow / PyTorch  
+- OpenCV  
+- NumPy  
+- Matplotlib  
+- Jupyter Notebook  
